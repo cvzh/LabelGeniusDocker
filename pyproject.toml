@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
   "torch",
+  "torchvision",
   "transformers",
   "pandas",
   "numpy",
@@ -14,7 +15,8 @@ dependencies = [
   "scikit-learn",
   "loguru",
   "sqlitedict",
-  "openai"
+  "openai",
+  "ipython"
 ]
 
 [project.scripts]
