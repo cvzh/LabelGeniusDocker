@@ -1,0 +1,21 @@
+[project]
+name = "labelgenius"
+version = "0.1.0"
+description = "LabelGenius — zero-shot + fine-tuned CLIP and GPT labeling CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "transformers",
+  "pandas",
+  "numpy",
+  "pillow",
+  "tqdm",
+  "scikit-learn",
+  "loguru",
+  "sqlitedict",
+  "openai"
+]
+
+[project.scripts]
+labelgenius = "labelgenius.cli:main"

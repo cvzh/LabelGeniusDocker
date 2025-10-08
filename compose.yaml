@@ -1,0 +1,16 @@
+services:
+  cpu:
+    build: { context: ., dockerfile: Dockerfile.cpu }
+    volumes: [ ".:/work" ]
+    working_dir: /work
+    entrypoint: [ "labelgenius" ]
+  cuda:
+    build: { context: ., dockerfile: Dockerfile.cuda }
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes: [ ".:/work" ]
+    working_dir: /work
+    entrypoint: [ "labelgenius" ]
